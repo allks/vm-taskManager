@@ -2,7 +2,10 @@
   <div id="app">
     <h1>Менеджер задач</h1>
     <hr>
-    <TodoList />
+    <TodoList 
+      v-bind:todos="todos"
+      @remove-todo="removeTodo"
+    />
   </div>
 </template>
 
@@ -10,6 +13,20 @@
 import TodoList from '@/components/TodoList'
 export default {
   name: 'app',
+  data(){
+    return {
+      todos: [
+        {id: 1, title: 'Купить хлеб', completed: false},
+        {id: 2, title: 'Купить масло', completed: false},
+        {id: 3, title: 'Купить пиво', completed: false}
+      ]
+    }
+  },
+  methods: {
+    removeTodo(id){
+      this.todos = this.todos.filter(t => t.id !== id)
+    }
+  },
   components: {
     TodoList
   }
