@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <h1>Менеджер задач</h1>
-    <hr>
     <router-view />
   </div>
 </template>

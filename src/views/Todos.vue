@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Менеджер задач</h2>
-    <router-link to="/">Home</router-link>
+    <router-link to="/" class="home"></router-link>
     <AddTodo 
       @add-todo="addTodo"
     />
@@ -10,7 +10,6 @@
       <option value="completed">Выполненные</option>
       <option value="not-completed">Не выполненные</option>
     </select>
-    <hr>
     <Loader v-if="loading" />
     <TodoList
       v-else-if="filteredTodos.length"
@@ -71,3 +70,30 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  h2{
+    color: #224B7A;
+    font-size: 30px;
+  }
+  .home{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-image: url("../assets/home.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #4A76A8;
+    border-radius: 5px;
+  }
+  .home:hover{
+    transform: rotate(360deg);
+    transition: 2s;
+  }
+  select{
+    margin: 20px;
+    width: 200px;
+    height: 30px;
+  }
+</style>

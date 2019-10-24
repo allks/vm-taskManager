@@ -30,12 +30,16 @@ export default {
 </script>
 
 <style scroped>
+  input{
+    
+  }
   li{
     border: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     padding: .5rem 2rem;
     margin-bottom: 1rem;
+    line-height: 2rem;
   }
   strong{
     margin: 0 1rem;
