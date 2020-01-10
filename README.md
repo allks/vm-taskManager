@@ -1,19 +1,9 @@
-# vue-todo-application
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Менеджер задач на vue.js #
+### Для работы сборки у вас должны быть установлены: ###
+* npm
+* npde.js
+### Как установить проект: ###
+* git clone URL
+* npm i
+### Для запуска в режиме разработки: ###
+* npm run serve
